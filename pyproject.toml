@@ -2,11 +2,12 @@
 name = "fastrag"
 version = "0.1.0"
 description = "Framework for fast RAG local system"
-requires-python = ">=3.13"
+requires-python = ">=3.13.9"
 dependencies = []
 
 [dependency-groups]
 dev = [
+    "mypy>=1.18.2",
     "ruff>=0.14.3",
 ]
 
@@ -122,3 +123,7 @@ ignore = [
 fixable = ["ALL"]  # Автоисправление для всех правил
 unfixable = []
 
+[tool.mypy]
+strict = true
+pretty = true
+follow_untyped_imports = true
