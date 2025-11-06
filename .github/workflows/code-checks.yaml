@@ -35,8 +35,7 @@ jobs:
           uv run mypy FastRag
       - name: Check commit messages 💬
         run: |
-          uv run cz check --rev-range HEAD~1..HEAD
+          uv run cz check
       - name: Run ruff 🛂
-        if: github.event_name == 'push'
         run: |
           uv run ruff check . --no-fix
