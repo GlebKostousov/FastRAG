@@ -7,11 +7,13 @@ dependencies = []
 
 [dependency-groups]
 dev = [
+    "commitizen>=4.9.1",
     "mypy>=1.18.2",
     "ruff>=0.14.3",
 ]
 
 
+# линтер
 [tool.ruff]
 required-version = ">=0.14.3"
 src = [
@@ -123,7 +125,17 @@ ignore = [
 fixable = ["ALL"]  # Автоисправление для всех правил
 unfixable = []
 
+# проверка типов
 [tool.mypy]
 strict = true
 pretty = true
 follow_untyped_imports = true
+
+# автогенерация версий и проверка коммитов
+[tool.commitizen]
+name = "cz_conventional_commits"
+version_files = ["pyproject.toml:^version"]
+version_provider = "pep621"
+tag_format = "v$version"
+update_changelog_on_bump = true
+changelog_incremental = true
