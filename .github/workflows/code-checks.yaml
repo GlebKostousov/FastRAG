@@ -1,0 +1,41 @@
+name: Code checks
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+    paths:
+      - ".github/workflows/**"
+      - "FastRag/**"
+
+jobs:
+  run-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code for UV
+        uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: '.python-version'
+      - name: Setup UV
+        uses: astral-sh/setup-uv@v5
+        with:
+          pyproject-file: 'pyproject.toml'
+          enable-cache: true
+      - name: Install the project
+        run: uv sync --locked --all-extras --dev
+      - name: Run black⬛
+        run: |
+          uv run black --check --diff ./
+      - name: Run mypy 🔍
+        run: |
+          uv run mypy FastRag
+      - name: Check commit messages 💬
+        run: |
+          uv run cz check
+      - name: Run ruff 🛂
+        run: |
+          uv run ruff check . --no-fix
