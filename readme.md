@@ -1,21 +1,27 @@
-# Для разработчиков
+# Develop
 
-## Установка
+## Setup
+
+Right click   `FastRag` -> Mark directory as -> Sources root
+
 
 ### Скачать репозиторий с помощью UV
 
-### Скачать dev зависимости
+### Скачать зависимости
+
+```shell
+uv install
+```
+
 
 ### Запустить и установить pre-commit
 
-#### Настройка хуков
+#### Configure pre-commit
 
 ```shell
 pre-commit autoupdate
 pre-commit install
 ```
-
-#### Тестовый запуск
 
 ```shell
 pre-commit run
