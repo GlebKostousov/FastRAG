@@ -4,8 +4,11 @@ version = "0.1.1"
 description = "Framework for fast RAG local system"
 requires-python = ">=3.13.9"
 dependencies = [
+    "chonkie>=1.4.1",
+    "huggingface-hub>=1.1.2",
     "pydantic>=2.12.4",
     "pydantic-settings>=2.11.0",
+    "requests>=2.32.5",
 ]
 
 [dependency-groups]
