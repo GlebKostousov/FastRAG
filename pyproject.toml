@@ -1,6 +1,6 @@
 [project]
 name = "fastrag"
-version = "0.1.0"
+version = "0.1.1"
 description = "Framework for fast RAG local system"
 requires-python = ">=3.13.9"
 dependencies = []
@@ -142,7 +142,7 @@ follow_untyped_imports = true
 [tool.commitizen]
 name = "cz_conventional_commits"
 version_files = ["pyproject.toml:^version"]
-version_provider = "pep621"
+version_provider = "uv"
 tag_format = "v$version"
 update_changelog_on_bump = true
 changelog_incremental = true
