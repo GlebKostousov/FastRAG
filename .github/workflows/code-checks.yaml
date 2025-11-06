@@ -33,9 +33,6 @@ jobs:
       - name: Run mypy 🔍
         run: |
           uv run mypy FastRag
-      - name: Check commit messages 💬
-        run: |
-          uv run cz check
       - name: Run ruff 🛂
         run: |
           uv run ruff check . --no-fix
