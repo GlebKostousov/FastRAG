@@ -35,7 +35,7 @@ jobs:
           uv run mypy FastRag
       - name: Check commit messages 💬
         run: |
-          uv run cz check
+          uv run cz check --rev-range HEAD~1..HEAD
       - name: Run ruff 🛂
         run: |
           uv run ruff check . --no-fix
