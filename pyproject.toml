@@ -17,7 +17,7 @@ dev = [
 # настройка uv
 [tool.uv]
 default-groups = "all"
-python = "3.13.9"
+python-version = "3.13.9"
 
 
 # линтер
