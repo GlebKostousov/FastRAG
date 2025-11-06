@@ -26,6 +26,7 @@ questionary==2.1.1
 ruff==0.14.3
 termcolor==3.2.0
 tomlkit==0.13.3
+types-colorama==0.4.15.20250801
 typing-extensions==4.15.0
 virtualenv==20.35.4
 wcwidth==0.2.14
