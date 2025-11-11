@@ -19,6 +19,9 @@ dev = [
     "ruff>=0.14.3",
     "types-colorama>=0.4.15.20250801",
 ]
+document-processor = [
+    "orjson>=3.11.4",
+]
 test-dep = [
     "chonkie[model2vec,st]>=1.4.1",
     "ipython>=9.7.0",
