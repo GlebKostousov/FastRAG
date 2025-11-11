@@ -5,11 +5,11 @@ description = "Framework for fast RAG local system"
 requires-python = ">=3.13.9"
 dependencies = [
     "chonkie>=1.4.1",
+    "pip>=25.3",
     "pydantic>=2.12.4",
     "pydantic-settings>=2.11.0",
     "requests>=2.32.5",
 ]
-
 [dependency-groups]
 dev = [
     "black>=25.9.0",
@@ -21,12 +21,15 @@ dev = [
 ]
 test-dep = [
     "chonkie[model2vec,st]>=1.4.1",
+    "ipython>=9.7.0",
+    "matplotlib>=3.10.7",
+    "networkx>=3.5",
+    "spacy>=3.8.8",
 ]
 
 # настройка uv
 [tool.uv]
 default-groups = "all"
-
 
 # линтер
 [tool.ruff]
