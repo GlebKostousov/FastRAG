@@ -20,7 +20,9 @@ dev = [
     "types-colorama>=0.4.15.20250801",
 ]
 document-processor = [
+    "filetype>=1.2.0",
     "orjson>=3.11.4",
+    "python-magic>=0.4.27",
 ]
 test-dep = [
     "chonkie[model2vec,st]>=1.4.1",
