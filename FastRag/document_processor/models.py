@@ -213,7 +213,7 @@ class DocumentNode(BaseModel):
     id: UUID = Field(default_factory=uuid4)
     type: ContentType
     content: TextBlock | Table | ImageData | CodeBlock | str
-    children: list[DocumentNode] = Field(default_factory=list)
+    children: list["DocumentNode"] = Field(default_factory=list)
     parent_id: UUID | None = None
     level: int = 0  # Уровень вложенности
     order: int = 0  # Порядок в документе
@@ -257,6 +257,7 @@ class UnifiedDocument(BaseModel):
             return Path(value)
         return value
 
+    # TODO: НЕ РАБОТАЕТ
     def to_markdown(self) -> str:
         """Экспорт в Markdown формат."""
         lines = []
