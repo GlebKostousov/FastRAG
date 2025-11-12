@@ -176,6 +176,7 @@ torchvision==0.24.0
 tqdm==4.67.1
 traitlets==5.14.3
 transformers==4.57.1
+tree-sitter==0.25.2
 triton==3.5.0 ; platform_machine == 'x86_64' and sys_platform == 'linux'
 typer==0.19.2
 typer-slim==0.20.0

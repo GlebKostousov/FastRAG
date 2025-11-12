@@ -27,6 +27,7 @@ document-processor = [
     "inscriptis>=2.6.0",
     "orjson>=3.11.4",
     "python-magic>=0.4.27",
+    "tree-sitter>=0.25.2",
 ]
 test-dep = [
     "chonkie[model2vec,st]>=1.4.1",
