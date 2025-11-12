@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from logging import Logger
 from textwrap import fill
 
-import colorama  # type: ignore[import]
+import colorama  # type: ignore[import-untyped]
 
 from config.const import (
     COLOR_WHITE,
