@@ -7,32 +7,27 @@ import sys
 from dataclasses import dataclass
 from logging import Logger
 from textwrap import fill
-from typing import Final
 
-import colorama
+import colorama  # type: ignore[import]
 
-_MODULE_NAME_WIDTH: Final[int] = 30
-_COLOR_WHITE: Final[str] = colorama.Fore.WHITE
-_DEFAULT_MSG_WIDTH: Final[int] = 110
-_DEFAULT_INDENT: Final[int] = 36
-_DEFAULT_LEVEL: Final[int] = logging.DEBUG
-_LEVEL_COLORS: Final[dict[str, str]] = {
-    "debug": colorama.Fore.BLUE,
-    "info": colorama.Fore.CYAN,
-    "warning": colorama.Fore.YELLOW,
-    "error": colorama.Fore.LIGHTRED_EX,
-    "critical": colorama.Fore.LIGHTMAGENTA_EX,
-}
+from config.const import (
+    COLOR_WHITE,
+    DEFAULT_INDENT,
+    DEFAULT_LEVEL,
+    DEFAULT_MSG_WIDTH,
+    LEVEL_COLORS,
+    MODULE_NAME_WIDTH,
+)
 
 
 @dataclass(frozen=True, slots=True)
 class LogConfig:
     """Конфигурация логирования."""
 
-    msg_width: int = _DEFAULT_MSG_WIDTH
-    indent_length: int = _DEFAULT_INDENT
-    level: int = _DEFAULT_LEVEL
-    module_name_width: int = _MODULE_NAME_WIDTH
+    msg_width: int = DEFAULT_MSG_WIDTH
+    indent_length: int = DEFAULT_INDENT
+    level: int = DEFAULT_LEVEL
+    module_name_width: int = MODULE_NAME_WIDTH
 
 
 class CustomFormatter(logging.Formatter):
@@ -68,7 +63,7 @@ class CustomFormatter(logging.Formatter):
 
         """
         level_name = record.levelname.lower()
-        color = _LEVEL_COLORS.get(level_name, _COLOR_WHITE)
+        color = LEVEL_COLORS.get(level_name, COLOR_WHITE)
 
         message = fill(
             record.getMessage(),
@@ -77,7 +72,7 @@ class CustomFormatter(logging.Formatter):
         )
 
         module_part = f"{self._module_name:<{self._config.module_name_width}}"
-        formatted_msg = f"{color}{module_part}  {_COLOR_WHITE}{message}"
+        formatted_msg = f"{color}{module_part}  {COLOR_WHITE}{message}"
 
         if record.exc_info:
             traceback_str = self.formatException(record.exc_info)
