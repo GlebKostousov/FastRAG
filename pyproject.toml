@@ -23,6 +23,8 @@ document-processor = [
     "chardet>=5.2.0",
     "docling>=2.61.2",
     "filetype>=1.2.0",
+    "html5lib>=1.1",
+    "inscriptis>=2.6.0",
     "orjson>=3.11.4",
     "python-magic>=0.4.27",
 ]
