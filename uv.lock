@@ -631,6 +631,7 @@ document-processor = [
     { name = "html5lib" },
     { name = "inscriptis" },
     { name = "orjson" },
+    { name = "pygments" },
     { name = "python-magic" },
     { name = "tree-sitter" },
 ]
@@ -667,6 +668,7 @@ document-processor = [
     { name = "html5lib", specifier = ">=1.1" },
     { name = "inscriptis", specifier = ">=2.6.0" },
     { name = "orjson", specifier = ">=3.11.4" },
+    { name = "pygments", specifier = ">=2.19.2" },
     { name = "python-magic", specifier = ">=0.4.27" },
     { name = "tree-sitter", specifier = ">=0.25.2" },
 ]

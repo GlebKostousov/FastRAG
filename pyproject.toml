@@ -26,6 +26,7 @@ document-processor = [
     "html5lib>=1.1",
     "inscriptis>=2.6.0",
     "orjson>=3.11.4",
+    "pygments>=2.19.2",
     "python-magic>=0.4.27",
     "tree-sitter>=0.25.2",
 ]
@@ -159,6 +160,7 @@ unfixable = []
 strict = true
 pretty = true
 follow_untyped_imports = true
+enable_error_code = ["ignore-without-code"]
 
 # автогенерация версий и проверка коммитов
 [tool.commitizen]
