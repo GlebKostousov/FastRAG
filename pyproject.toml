@@ -26,15 +26,10 @@ dev = [
 ]
 document-processor = [
     "chardet>=5.2.0",
-    "docling>=2.61.2",
-    "docling-core>=2.50.1",
     "filetype>=1.2.0",
     "html5lib>=1.1",
     "inscriptis>=2.6.0",
     "orjson>=3.11.4",
-    "paddleocr>=3.3.2",
-    "paddlepaddle>=3.2.2",
-    "paddlex[ocr]>=3.3.9",
     "pygments>=2.19.2",
     "python-magic>=0.4.27",
     "safetensors",
@@ -45,8 +40,6 @@ document-processor = [
 test-dep = [
     "chonkie[model2vec,st]>=1.4.1",
     "ipython>=9.7.0",
-    "matplotlib>=3.10.7",
-    "networkx>=3.5",
     "spacy>=3.8.8",
 ]
 
