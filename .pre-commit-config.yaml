@@ -1,6 +1,6 @@
 repos:
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 0.9.7
+    rev: 0.9.9
     hooks:
       - id: uv-lock # check lock file have changes
       - id: uv-export # generate requirements.txt
@@ -22,18 +22,18 @@ repos:
       - id: check-toml  # check TOML-files
       - id: detect-private-key  # find private key
       - id: name-tests-test  # check test file names
-  - repo: https://github.com/psf/black
-    rev: 25.9.0 #enable black before commit
+  - repo: https://github.com/psf/black-pre-commit-mirror
+    rev: 25.11.0 #enable black before commit
     hooks:
       - id: black
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.14.3 #enable ruff before commit
+    rev: v0.14.5 #enable ruff before commit
     hooks:
       - id: ruff
         args:
           - --fix
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: v4.9.1 #enable check Conventional Commits before commit
+    rev: v4.10.0 #enable check Conventional Commits before commit
     hooks:
       - id: commitizen
         stages: [ commit-msg ]
