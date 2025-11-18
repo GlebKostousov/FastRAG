@@ -159,6 +159,7 @@ ignore = [
     "SIM210", #  Remove unnecessary `True if ... else False`
     "FBT001", # Boolean-typed positional argument in function definition
     "E501", # Line too long
+    "D401", # First line of docstring should be in imperative mood
 ]
 fixable = ["ALL"]  # Автоисправление для всех правил
 unfixable = []
